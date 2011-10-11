@@ -1,0 +1,9 @@
+YubikeyTools
+https://github.com/qistoph/YubikeyTools
+
+Chris van Marle - 2011
+
+This repository will contain some of my Yubikey related (code) projects.
+
+To create a copy use:
+git clone git://github.com/qistoph/YubikeyTools.git
