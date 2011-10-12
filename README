@@ -5,5 +5,13 @@ Chris van Marle - 2011
 
 This repository will contain some of my Yubikey related (code) projects.
 
-To create a copy use:
+To create a copy you could use:
 git clone git://github.com/qistoph/YubikeyTools.git
+
+
+For now there's just a single tool in the repository, YubikeyDecrypt.
+
+YubikeyDecrypt
+Visual interface to analyse data in Yubikey generated OTPs.
+You will need the AES-key to decrypt the OTP.
+Generating an OTP from input variables is still a bit buggy.
