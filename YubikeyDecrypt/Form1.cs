@@ -55,6 +55,8 @@ namespace YubikeyDecrypt
             try
             {
                 string inputStr = txtInputOtp.Text;
+                if (inputStr.Length < 32)
+                    return;
                 publicId = inputStr.Substring(0, inputStr.Length - 32);
                 inputOtp = GetByteArrayFromString(inputStr.Substring(inputStr.Length - 32, 32));
 
