@@ -32,6 +32,8 @@ namespace YubikeyDecrypt
                 case 'u': return 0xe;
                 case 'v': return 0xf;
             }
+
+            throw new ArgumentException("Invalid ModHex character");
         }
 
         public static string Encode(byte[] data)
@@ -49,7 +51,9 @@ namespace YubikeyDecrypt
 
         public static byte[] Decode(string str)
         {
-            Debug.Assert(str.Length % 2 == 0);
+            if (str.Length % 2 != 0)
+                throw new ArgumentException("string to decode must have even number of characters");
+
             byte[] data = new byte[str.Length / 2];
             for (int i = 0; i < data.Length; ++i)
             {

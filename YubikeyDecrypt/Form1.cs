@@ -201,11 +201,17 @@ namespace YubikeyDecrypt
 
                 txtInputOtp.Text = /*txtOtpGenerated.Text =*/ pid + ModHex.Encode(data);
             }
-            catch (FormatException)
+            catch (ArgumentException ex)
             {
+                lblInputStatus.Text = ex.Message;
             }
-            catch (OverflowException)
+            catch (FormatException ex)
             {
+                lblInputStatus.Text = ex.Message;
+            }
+            catch (OverflowException ex)
+            {
+                lblInputStatus.Text = ex.Message;
             }
         }
 
